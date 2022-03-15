@@ -1,2 +1,5 @@
 console.log('JavaScript is running');
-console.log('The JS module is loaded!')
+let score = 100
+
+alert(score2)
+alert(score)
