@@ -29,9 +29,6 @@ const functionC = (f) => {
 // functionC(functionA)
 //=> 
 
-const greet = (person) => {
-    console.log('HELLO', person)
-}
 
 const blender = (string) => {
     return string.split('')
