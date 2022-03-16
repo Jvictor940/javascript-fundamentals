@@ -4,11 +4,11 @@ const greet = () => {
 greet()
 
 const square = (num) => {
-    return num * num 
+    return num * num
 }
 square(10)
 
 const greetByName = (str) => {
-    console.log('Hello', str)
+    console.log('Hello, str')
 }
-greetByName('Jerry')
+greetByName(Jerry)
