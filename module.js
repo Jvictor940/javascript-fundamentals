@@ -20,11 +20,14 @@ const functionA = () => {
 const functionB = () => {
     console.log('FUNCTION B HAS BEEN CALLLED!')
 }
+
 //callback 
 const functionC = (f) => {
     console.log('FUNCTION C HAS BEEN CALLED')
     f()
 }
+// functionC(functionA)
+//=> 
 
 const greet = (person) => {
     console.log('HELLO', person)
