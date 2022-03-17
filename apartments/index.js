@@ -5,10 +5,6 @@ let apt1 = {
     windows: 0,
     rent: 4500, 
     unit: '1A',
-    lease: function (tenant) {
-        this.tenants.push(tenant)
-        console.log(tenant.name, "has rented out", this.unit)
-    },
     tenants: []
 }
 let apt2 = {
@@ -58,14 +54,12 @@ let building = {
     streetAdress: '11 Broadway, New York, NY, 11222',
     laundry: false,
     allowsPets: false, 
+    lease: function (apt, tenant) {
+        if(apt.tenants.length === apt.bedrooms) 
+        return `${apt.unit} is already full`
+        apt.tenants.push(tenant)
+        console.log(tenant.name, "has rented out", apt.unit)
+    },
     apartments: [apt1, apt2, apt3]
 
 }
-
-
-// bedrooms: ,
-//         sqft: ,
-//         bathrooms: ,
-//         windows: , 
-//         rent: ,
-//         unitNumber: ,
