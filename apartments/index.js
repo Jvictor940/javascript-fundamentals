@@ -4,7 +4,8 @@ let apt1 = {
     bathrooms: 3, 
     windows: 0,
     rent: 4500, 
-    unit: '1A'
+    unit: '1A',
+    tenants: []
 }
 let apt2 = {
     bedrooms: 2,
@@ -12,7 +13,8 @@ let apt2 = {
     bathrooms: 3, 
     windows: 0,
     rent: 1500, 
-    unit: '1B'
+    unit: '1B',
+    tenants: []
 }
 let apt3 = {
     bedrooms: 2,
@@ -20,9 +22,33 @@ let apt3 = {
     bathrooms: 3, 
     windows: 2,
     rent: 2400, 
-    unit: '1C'
+    unit: '1C',
+    tenants: []
 }
 
+let apt4 = {
+    bedrooms: 2,
+    sqft: 53, 
+    bathrooms: 3, 
+    windows: 2,
+    rent: 900, 
+    unit: '1C',
+    tenants: []
+}
+
+let tenant1 = {
+    name: 'John Doe',
+    creditScore: 400,
+    salary: 15000,
+    Age: 30
+}
+
+let tenant2 = {
+    name: 'Jane Doe',
+    creditScore: 800,
+    salary: 22000,
+    Age: 33
+}
 
 let building = {
     streetAdress: '11 Broadway, New York, NY, 11222',
@@ -31,6 +57,7 @@ let building = {
     apartments: [apt1, apt2, apt3]
 
 }
+
 
 // bedrooms: ,
 //         sqft: ,
