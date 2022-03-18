@@ -62,10 +62,104 @@ let building = {
         if (this.allowsPets === false && tenant.pet) { 
             return `${apt.unit} is available, but you must give ${tenant.pet} up for adoption!`
         }
-            
-        apt.tenants.push(tenant)
+        let t = apt.tenants.push(tenant)    
         console.log(tenant.name, "has rented out", apt.unit)
+        return t
+    },
+    occupiedApts: function() { 
+        // returns only the apts which have tenants inside them
+        // condition to test: apt.tenants.length
+        return this.apartments.filter((el) => {
+            return el.tenants.length > 0
+        })
+    }, 
+    fullApts: function() {
+        //returns the apts which are completely full
+        //condition to test: apt.tenants.lenght === apt.bedrooms 
+        return this.apartments.filter((el) => {
+            return el.tenants,length === el.bedrooms 
+        })
     },
     apartments: [apt1, apt2, apt3]
 
 }
+
+// Write a basic JavaScript object that represents a user that has no fewer than 3 keys/properties about that user
+const user = {
+    name: "Jerry",
+    address: "11 Broadway",
+    age: 27,
+}
+
+// Write a function called greet that takes no arguments and prints the string "Hello World"
+const greet = () => {
+    console.log("Hello, World!")
+}
+
+// Create an array called fruits with 5 elements
+const fruits = ['apple', 'orange', 'pineapple', 'pear', 'peach']
+
+//console.log the second element and console.log the last element of the above array
+console.log(fruits[1])
+console.log(fruits.length - 1)
+
+// Create an object that represents an apartment building without referring to any code
+
+
+let apt5 = {
+    rent:3000,
+    laundry: true,
+    bedrooms: 3
+
+}
+
+let apt6 = {
+    rent:2500,
+    laundry: true,
+    bedrooms: 2
+     
+}
+
+let apt7 = {
+    rent:2000,
+    laundry: true,
+    bedrooms: 1, 
+     
+}
+
+let aptBuilding = {
+    apartments: [apt5, apt6, apt7],
+    tenants: [],
+    streetAddress: "11 Broadway", 
+}
+
+
+// array.push()
+// const nfcTeams = ['49ers', 'rams', 'seahawks']
+// nfcTeams.push('cardinals')
+// const afcTeams = ['titans', 'browns', 'cheifs']
+// nfcTeams.push(...afcTeams)
+
+// Console.table() revieew
+// const family = {
+//     mother: {
+//         firstName: "Susan",
+//         lastName: "Doyle",
+//         age: 32
+//     },
+//     father: {
+//         firstName: "John",
+//         lastName: "Doyle",
+//         age: 33
+//     },
+//     daughter: {
+//         firstName: "Lily",
+//         lastName: "Doyle",
+//         age: 5
+//     },
+//     son: {
+//         firstName: "Mike",
+//         lastName: "Doyle",
+//         age: 8
+//     }
+// }
