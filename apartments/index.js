@@ -138,14 +138,26 @@ const div = document.getElementById('building')
 const render = () => {
     let h2 = document.createElement('h2')
     h2.innerText = building.streetAddress
-    div.append(h2)
     let ul = document.createElement('ul')
     building.apartments.forEach((element) => {
         let li = document.createElement('li')
-        li.innerText = element.unit
+        let button = document.createElement('button')
+
+        //button.innerText = 'RENT' + element.unit
+        button.innerText = `RENT: Vacancies: ${element.bedrooms}`
+        li.innerText = `${element.unit} vacancies: ${element.bedrooms}`
+
+
+        button.addEventListener('click' , () => {
+            if (element.bedrooms <= 0) return alert ("SORRY, NEW YORK IS DEAD")
+            let Vacancies = element.bedrooms - 1
+            button.innerText = `RENT: Vacancies: ${Vacancies}`
+            element.vacancies -= 1  
+        })
+        li.append(button)
         ul.append(li)
     })
-    div.append(ul)
+    div.append(h2, ul)
 }
 render()
 
